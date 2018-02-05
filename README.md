@@ -6,4 +6,4 @@ Your goal is to come as far up as possible. With your Finger as Input, you fling
 
 ![alt text](https://github.com/Robin-Assmann/shoot-ball/blob/master/wiki/Menu.PNG)
 ![alt text](https://github.com/Robin-Assmann/shoot-ball/blob/master/wiki/Start.PNG)
-![alt text](https://github.com/Robin-Assmann/shoot-ball/blob/master/wiki/Game.PNG)
+![alt text](https://github.com/Robin-Assmann/shoot-ball/blob/master/wiki/Play.PNG)
