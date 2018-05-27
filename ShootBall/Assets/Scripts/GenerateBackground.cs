@@ -7,9 +7,11 @@ public class GenerateBackground : MonoBehaviour {
 
 	public int value = 2;
 
+	//boolean to check for first ball enter
 	private bool go = true;
 	private Vector2 PossibleSpawn;
 
+	//Initialize new background
 	public void Initialize(){
 
 		int count = 0;
@@ -17,20 +19,18 @@ public class GenerateBackground : MonoBehaviour {
 		List<GameObject> circles = new List<GameObject> ();
 		List<GameObject> obstacles = new List<GameObject> ();
 
+		//Decide the difficulty of the next Background
 		if (value <= 10) {
-		
 			count = 4;
 		} else if(value <= 20){
-
 			count = 3;
 		} else if(value <= 30){
-
 			count = 2;
 		} else if(value > 30){
-
 			count = 1;
 		}
 
+		//Count of generated objects depending on the difficulty
 		switch (count) {
 		case 1:
 			ob = 4;
@@ -43,7 +43,7 @@ public class GenerateBackground : MonoBehaviour {
 			break;
 		}
 
-
+		//Differnet Difficult Levels decide outcome of new object
 		for (int i = 0; i < count; i++) {
 			//circles.Add (GameControl.instance.Pre_Normal);
 			int value = Random.Range (0, 100);
@@ -209,6 +209,7 @@ public class GenerateBackground : MonoBehaviour {
 		go = true;
 	}
 
+	// On first enter of the ball generate a new background offscreen
 	void OnTriggerEnter2D(Collider2D other){
 		if (!go)
 			return;

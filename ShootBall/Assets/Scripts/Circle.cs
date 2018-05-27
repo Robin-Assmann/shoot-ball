@@ -23,9 +23,10 @@ public class Circle : MonoBehaviour {
 
 	void Update () {
 
+
+		//If in Editor mode use Keyboard Inputs
 		#if UNITY_EDITOR
 		if(Input.GetMouseButtonDown(0)){
-
 
 			Vector2 startingdrag = DragBox.position;
 			Vector3 mouseCache = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,Camera.main.nearClipPlane));
@@ -43,6 +44,7 @@ public class Circle : MonoBehaviour {
 		}
 		#endif
 
+		//Else use Touch as Input
 		if(Input.touchCount>0){
 
 			Touch touch = Input.GetTouch(0);
@@ -67,6 +69,7 @@ public class Circle : MonoBehaviour {
 		}
 	}
 
+	//Check if ball should be shot
 	void FixedUpdate(){
 
 		if (touched) {
